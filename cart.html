@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <header>
+        <!-- Barre de navigation avec logo et boutons de connexion/inscription -->
+      <nav class="navbar">
+        <div class="logo">
+          <h1>Abonnement Platform</h1>
+        </div>
+        <div class="nav-links">
+          <a href="index.html"><button>Accueil</button></a>
+          <!-- Bouton qui ouvre nos abonnements -->
+          <a href="subscription.html"><button >Nos offres</button></a>
+          <a href="cart.html"><button>Panier</button></a>
+          <!-- Bouton qui ouvre la modale de connexion -->
+          <button onclick="openLoginModal()">Se connecter</button>
+          <!-- Bouton qui ouvre la modale d'inscription -->
+          <button onclick="openRegisterModal()">S'inscrire</button>
+        </div>
+      </nav>
+      <h1>Votre Panier</h1>
+    </header>
+
+    <!-- Section du panier -->
+    <section class="cart">
+        <h2>Articles dans votre panier</h2>
+        <div id="cart-details"></div>
+
+        <div class="cart-actions">
+            <button onclick="goToCheckout()">Finaliser la commande</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Abonnement Platform</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+    <script>
+        // Appelle la fonction pour afficher le contenu du panier dès que la page est prête
+        displayCart();
+      </script>
+    
+</body>
+</html>

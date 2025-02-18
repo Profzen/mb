@@ -1,0 +1,336 @@
+/* ============================= */
+/*       Styles Généraux        */
+/* ============================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* ============================= */
+  /*         Navigation           */
+  /* ============================= */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF; /* Bleu vibrant */
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .nav-links button {
+    margin-left: 10px;
+    background-color: white;
+    color: #007BFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* ============================= */
+  /*         Section Héros        */
+  /* ============================= */
+  .hero {
+    background: linear-gradient(135deg, #00C6FF, #0072FF); /* Dégradé dynamique */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hero button {
+    padding: 12px 24px;
+    background-color: white;
+    color: #0072FF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* ============================= */
+  /*    Sections Abonnements      */
+  /* ============================= */
+  .subscriptions, .popular-subscriptions {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .subscriptions h2, .popular-subscriptions h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Conteneur des abonnements en disposition flexible */
+  .subscription-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Style de chaque carte d'abonnement */
+  .subscription-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .subscription-item h3 {
+    margin-top: 0;
+    color: #007BFF;
+  }
+  
+  .subscription-item p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .subscription-item button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscription-item button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Accentuer les abonnements populaires */
+  .subscription-item.popular {
+    border: 2px solid #FF5722; /* Couleur d'accent pour les items populaires */
+  }
+  
+  /* ============================= */
+  /*         Modales              */
+  /* ============================= */
+  .modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Fond semi-transparent */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Centré verticalement */
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .modal-content button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Bouton de fermeture (X) */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: black;
+  }
+  
+  /* ============================= */
+  /*          Footer              */
+  /* ============================= */
+  footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  /* ============================= */
+  /*        Styles Responsive     */
+  /* ============================= */
+  @media (max-width: 768px) {
+    .subscription-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero h2 {
+      font-size: 28px;
+    }
+  }
+
+  
+  /* ========= Barre de Navigation Générale ========= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Couleur de fond vive */
+  color: white;
+}
+
+/* Logo à gauche */
+.logo {
+  flex: 1;
+}
+
+/* Liens de navigation pour PC */
+.nav-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;  /* Espacement entre les éléments */
+}
+
+/* Bouton panier à droite */
+.cart-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Style du bouton panier */
+.cart-container button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Style de l'icône et du compteur */
+.cart-icon {
+  margin-right: 5px;
+}
+.cart-counter {
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* ========= Menu Burger (Mobile) ========= */
+/* Par défaut, le menu burger est caché sur desktop */
+.hamburger-menu {
+  display: none;
+}
+
+/* ========= Responsive Styles ========= */
+@media (max-width: 768px) {
+  /* Affichage sur mobile : logo à gauche, menu burger au centre, panier à droite */
+  .navbar {
+    justify-content: space-between;
+  }
+  
+  /* Afficher le menu burger sur mobile */
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+  }
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+  }
+  
+  /* Masquer les liens de navigation par défaut */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajuste selon la hauteur de la navbar */
+    left: 0;
+    width: 100%;
+    background-color: #007BFF;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  /* On conserve le logo et le panier dans leurs positions respectives */
+  .logo, .cart-container {
+    flex: 1;
+  }
+}
+
+/* Optionnel : classe pour afficher le menu burger quand il est actif */
+.nav-links.mobile-active {
+  display: flex;
+}

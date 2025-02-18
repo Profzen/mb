@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- Assure que le site s'adapte aux différentes tailles d'écran -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abonnement Platform</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Navigation (Header) ===== -->
+  <header>
+    <!-- Barre de navigation avec logo et boutons de connexion/inscription -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Abonnement Platform</h1>
+      </div>
+
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html"><button>Accueil</button></a>
+        <!-- Bouton qui ouvre nos abonnements -->
+        <a href="subscription.html"><button >Nos offres</button></a>
+        <a href="cart.html"><button onclick="openCartModal()">
+          <span class="cart-icon">🌴</span>
+          <span class="cart-counter" id="cart-counter">0</span>
+          Panier
+        </button></a>
+        
+        <!-- Bouton qui ouvre la modale de connexion -->
+        <button onclick="openLoginModal()">Se connecter</button>
+        <!-- Bouton qui ouvre la modale d'inscription -->
+        <button onclick="openRegisterModal()">S'inscrire</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Section Héros ===== -->
+  <section class="hero">
+    <h2>Bienvenue sur Abonnement Platform</h2>
+    <p>Découvrez nos abonnements exclusifs et profitez d'offres exceptionnelles !</p>
+    <!-- Bouton pour accéder directement au panier (par exemple) -->
+    <button onclick="window.location.href='cart.html'">Voir mon panier</button>
+  </section>
+
+  <!-- ===== Section "Nos Abonnements" ===== -->
+  <section class="subscriptions">
+    <h2>Nos Abonnements</h2>
+    <div class="subscription-container">
+      <!-- Exemple d'abonnement -->
+      <div class="subscription-item">
+        <h3>Netflix Premium</h3>
+        <p>15€ / mois</p>
+        <!-- Bouton qui ajoute l'abonnement au panier -->
+        <button onclick="addToCart('Netflix Premium', 15)">Ajouter au panier</button>
+      </div>
+      <div class="subscription-item">
+        <h3>Pack Cours en ligne</h3>
+        <p>20€ / mois</p>
+        <button onclick="addToCart('Pack Cours en ligne', 20)">Ajouter au panier</button>
+      </div>
+      <!-- Vous pouvez ajouter d'autres abonnements ici -->
+    </div>
+  </section>
+
+  <!-- ===== Section "Abonnements Populaires" ===== -->
+  <section class="popular-subscriptions">
+    <h2>Abonnements Populaires</h2>
+    <div class="subscription-container">
+      <div class="subscription-item popular">
+        <h3>Spotify Premium</h3>
+        <p>10€ / mois</p>
+        <button onclick="addToCart('Spotify Premium', 10)">Ajouter au panier</button>
+      </div>
+      <div class="subscription-item popular">
+        <h3>Amazon Prime</h3>
+        <p>12€ / mois</p>
+        <button onclick="addToCart('Amazon Prime', 12)">Ajouter au panier</button>
+      </div>
+      <!-- D'autres abonnements populaires peuvent être ajoutés ici -->
+    </div>
+  </section>
+
+  <!-- ===== Modale de Connexion ===== -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <!-- Bouton de fermeture de la modale -->
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Se connecter</h2>
+      <!-- Formulaire de connexion -->
+      <form id="loginForm">
+        <label for="loginEmail">Email :</label>
+        <input type="email" id="loginEmail" name="loginEmail" required>
+        <label for="loginPassword">Mot de passe :</label>
+        <input type="password" id="loginPassword" name="loginPassword" required>
+        <button type="submit">Se connecter</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Modale d'Inscription ===== -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegisterModal()">&times;</span>
+      <h2>S'inscrire</h2>
+      <!-- Formulaire d'inscription -->
+      <form id="registerForm">
+        <label for="registerEmail">Email :</label>
+        <input type="email" id="registerEmail" name="registerEmail" required>
+        <label for="registerPassword">Mot de passe :</label>
+        <input type="password" id="registerPassword" name="registerPassword" required>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Abonnement Platform</p>
+  </footer>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
