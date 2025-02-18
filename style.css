@@ -118,6 +118,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
+    border: 2px solid #FF5722; /* Couleur d'accent pour les items populaires */
   }
 
   
@@ -155,11 +156,7 @@ body {
     background-color: #0056b3;
   }
   
- 
-  .subscription-item {
-    border: 2px solid #FF5722; /* Couleur d'accent pour les items populaires */
-  }
-  
+
   /* ============================= */
   /*         Modales              */
   /* ============================= */
@@ -365,6 +362,11 @@ body {
     box-sizing: border-box;
   }
   
+  .subscription-item.popular {
+    /* Chaque carte occupe environ 50% de la largeur de la ligne moins un peu d'espace pour le gap */
+    flex: 0 0 calc(50% - 20px);
+    box-sizing: border-box;
+  }
 }
 
 /* Optionnel : classe pour afficher le menu burger quand il est actif */
