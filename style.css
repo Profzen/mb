@@ -17,6 +17,7 @@ body {
     background-color: #007BFF; /* Bleu vibrant */
     padding: 10px 20px;
     color: white;
+    
   }
   
   .navbar .logo h1 {
@@ -24,8 +25,12 @@ body {
     font-size: 24px;
   }
   
+  .nav-links {
+    display: flex;
+    margin-left: auto;
+  }
   .nav-links button {
-    margin-left: 10px;
+    margin-right: 0px;
     background-color: white;
     color: #007BFF;
     border: none;
@@ -235,9 +240,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0 1rem;
   background-color: #007BFF; /* Couleur de fond vive */
   color: white;
+  
 }
 
 /* Logo à gauche */
@@ -302,6 +308,12 @@ body {
     align-items: center;
     cursor: pointer;
     flex: 1;
+    order: 2;
+  }
+  .cart-button {
+    order: 1;
+    flex: 1;
+    text-align: center;
   }
   .hamburger-menu .bar {
     width: 25px;

@@ -6,12 +6,6 @@ console.log("Script chargé");
 // Récupère le panier depuis le localStorage ou initialise un tableau vide
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-/**
- * Ajoute un abonnement au panier et enregistre dans localStorage
- * @param {string} name - Nom de l'abonnement
- * @param {number} price - Prix de l'abonnement
- */
-
 
 /**
  * Affiche le contenu du panier sur la page (pour cart.html)
@@ -83,6 +77,8 @@ function viewCart() {
   });
   alert(cartDetails);
 }
+// Appelle la fonction pour afficher le contenu du panier dès que la page est prête
+displayCart();
 
 /******************************************
  *       Gestion des Modales              *
