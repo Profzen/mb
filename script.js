@@ -1,3 +1,4 @@
+console.log("Script chargé");
 /******************************************
  *         Gestion du Panier              *
  ******************************************/
@@ -128,23 +129,25 @@ document.getElementById('registerForm')?.addEventListener('submit', function(e) 
 });
 
 
-payWithMobileMoney()
-payWithVisa()
+//payWithMobileMoney()
+//payWithVisa()
 
-// Fonction pour mettre à jour le compteur du panier
 function updateCartCounter() {
-  // Récupère le panier depuis le localStorage ou initialise un tableau vide
+  // Récupère le panier depuis localStorage ou initialise un tableau vide
   const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
-  // Sélectionne l'élément qui affiche le compteur
   const counterElement = document.getElementById('cart-counter');
   if (counterElement) {
-    // Met à jour le texte avec la longueur du panier
     counterElement.textContent = currentCart.length;
+    // Ajoute cette ligne pour vérifier dans la console
+    console.log("updateCartCounter() appelé - Compteur mis à jour :", currentCart.length);
   }
 }
 
+
+
 // Appelle updateCartCounter quand le DOM est entièrement chargé
-document.addEventListener('DOMContentLoaded', updateCartCounter);
+window.onload = updateCartCounter;
+
 
 
 /**

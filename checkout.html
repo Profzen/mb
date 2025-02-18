@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
-    <header>
-        <!-- Barre de navigation avec logo et boutons de connexion/inscription -->
-      <nav class="navbar">
-        <div class="logo">
-          <h1>Abonnement Platform</h1>
-        </div>
-        <div class="nav-links">
-          <a href="index.html"><button>Accueil</button></a>
-          <!-- Bouton qui ouvre nos abonnements -->
-          <a href="subscription.html"><button >Nos offres</button></a>
-          <a href="cart.html"><button>Panier</button></a>
-          <!-- Bouton qui ouvre la modale de connexion -->
-          <button onclick="openLoginModal()">Se connecter</button>
-          <!-- Bouton qui ouvre la modale d'inscription -->
-          <button onclick="openRegisterModal()">S'inscrire</button>
-        </div>
-      </nav>
-      <h1>Finaliser votre commande</h1>
-    </header>
+  <header>
+    <!-- Barre de navigation avec logo et boutons de connexion/inscription -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Abonnement Platform</h1>
+      </div>
+
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html"><button>Accueil</button></a>
+        <!-- Bouton qui ouvre nos abonnements -->
+        <a href="subscription.html"><button >Nos offres</button></a>
+        <a href="cart.html"><button onclick="openCartModal()">
+          <span class="cart-icon">🌴</span>
+          <span class="cart-counter" id="cart-counter">0</span>
+          Panier
+        </button></a>
+        
+        <!-- Bouton qui ouvre la modale de connexion -->
+        <button onclick="openLoginModal()">Se connecter</button>
+        <!-- Bouton qui ouvre la modale d'inscription -->
+        <button onclick="openRegisterModal()">S'inscrire</button>
+      </div>
+    </nav>
+  </header>
 
     <!-- Section panier -->
     <section class="checkout">
