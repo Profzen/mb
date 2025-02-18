@@ -130,6 +130,16 @@ body {
     font-size: 16px;
     margin: 10px 0;
   }
+   /* Accentuer les abonnements populaires */
+   .subscription-item.popular {
+    border: 2px solid #0072FF; /* Couleur d'accent pour les items populaires */
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; 
+  }
   
   .subscription-item button {
     padding: 10px 20px;
@@ -354,16 +364,7 @@ body {
     flex: 0 0 calc(50% - 20px);
     box-sizing: border-box;
   }
-   /* Accentuer les abonnements populaires */
-   .subscription-item.popular {
-    border: 2px solid #0072FF; /* Couleur d'accent pour les items populaires */
-    background-color: #f9f9f9;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center; 
-  }
+  
 }
 
 /* Optionnel : classe pour afficher le menu burger quand il est actif */
