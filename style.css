@@ -145,16 +145,7 @@ body {
     background-color: #0056b3;
   }
   
-  /* Accentuer les abonnements populaires */
-  .subscription-item.popular {
-    border: 2px solid #0072FF; /* Couleur d'accent pour les items populaires */
-    background-color: #f9f9f9;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    text-align: center; 
-  }
+ 
   .subscription-item {
     border: 2px solid #FF5722; /* Couleur d'accent pour les items populaires */
   }
@@ -362,6 +353,16 @@ body {
     /* Chaque carte occupe environ 50% de la largeur de la ligne moins un peu d'espace pour le gap */
     flex: 0 0 calc(50% - 20px);
     box-sizing: border-box;
+  }
+   /* Accentuer les abonnements populaires */
+   .subscription-item.popular {
+    border: 2px solid #0072FF; /* Couleur d'accent pour les items populaires */
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; 
   }
 }
 
