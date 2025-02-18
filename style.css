@@ -98,7 +98,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 50px;
+    padding: 0px;
   }
   
   /* Style de chaque carte d'abonnement */
@@ -224,7 +224,20 @@ body {
     padding: 10px 0;
   }
   
-  
+  /* ============================= */
+  /*        Styles Responsive     */
+  /* ============================= */
+  @media (max-width: 768px) {
+    .subscription-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero h2 {
+      font-size: 28px;
+    }
+  }
+
   
   /* ========= Barre de Navigation Générale ========= */
 .navbar {
@@ -234,7 +247,6 @@ body {
   padding: 0 1rem;
   background-color: #007BFF; /* Couleur de fond vive */
   color: white;
-  height: 30px;
   
 }
 
@@ -333,20 +345,7 @@ body {
     flex: 1;
   }
 }
-@media (max-width: 768px) {
-  .subscription-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* espace entre les cartes */
-  }
-  
-  .subscription-item {
-    /* Chaque carte occupe environ 50% de la largeur de la ligne moins un peu d'espace pour le gap */
-    flex: 0 0 calc(50% - 20px);
-    box-sizing: border-box;
-  }
-}
+
 
 /* Optionnel : classe pour afficher le menu burger quand il est actif */
 .nav-links.mobile-active {
