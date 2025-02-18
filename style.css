@@ -98,6 +98,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 50px;
   }
   
   /* Style de chaque carte d'abonnement */
@@ -223,20 +224,7 @@ body {
     padding: 10px 0;
   }
   
-  /* ============================= */
-  /*        Styles Responsive     */
-  /* ============================= */
-  @media (max-width: 768px) {
-    .subscription-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .hero h2 {
-      font-size: 28px;
-    }
-  }
-
+  
   
   /* ========= Barre de Navigation Générale ========= */
 .navbar {
@@ -246,6 +234,7 @@ body {
   padding: 0 1rem;
   background-color: #007BFF; /* Couleur de fond vive */
   color: white;
+  height: 30px;
   
 }
 
