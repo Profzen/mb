@@ -119,6 +119,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
   }
+
   
   .subscription-item h3 {
     margin-top: 0;
@@ -147,6 +148,12 @@ body {
   /* Accentuer les abonnements populaires */
   .subscription-item.popular {
     border: 2px solid #0072FF; /* Couleur d'accent pour les items populaires */
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center; 
   }
   .subscription-item {
     border: 2px solid #FF5722; /* Couleur d'accent pour les items populaires */
