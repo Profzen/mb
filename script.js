@@ -21,29 +21,45 @@ function displayCart() {
   const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
   
   // Sélectionne l'élément HTML qui affichera le panier
-  const cartDetails = document.getElementById('cart-details');
-  
+  const cartItemsContainer = document.getElementById('cart-items'); // Par exemple, utilisez un conteneur avec cet ID
+  cartItemsContainer.innerHTML = '';
+
   // Si le panier est vide, affiche un message
   if (currentCart.length === 0) {
-    cartDetails.innerHTML = "<p>Votre panier est vide.</p>";
+    cartItemsContainer.innerHTML = "<p>Votre panier est vide.</p>";
     return;
   }
   
-  // Initialise le contenu HTML pour la liste du panier
   let total = 0;
-  let html = "<ul>";
   currentCart.forEach((item, index) => {
-    total += item.price;
-    html += `
-      <li>
-        ${item.name} - ${item.price}€
+    total += item.price; // Vous pouvez également gérer les quantités ici si besoin
+
+    // Crée une div pour chaque article
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+
+    // Remplit la div avec l'image, le nom, la description et le bouton de suppression
+    itemDiv.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+      <div class="cart-item-details">
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+        <p>Prix: ${item.price}€</p>
         <button onclick="removeFromCart(${index})">Supprimer</button>
-      </li>
+      </div>
     `;
+    
+    cartItemsContainer.appendChild(itemDiv);
   });
-  html += `</ul><p><strong>Total : ${total}€</strong></p>`;
-  cartDetails.innerHTML = html;
+  
+  // Affiche le total
+  const totalElement = document.createElement('div');
+  totalElement.classList.add('cart-total');
+  totalElement.innerHTML = `<strong>Total : ${total}€</strong>`;
+  cartItemsContainer.appendChild(totalElement);
 }
+
+
 
 /**
  * Supprime un article du panier en fonction de son index
@@ -151,23 +167,31 @@ window.onload = updateCartCounter;
 
 
 /**
- * Ajoute un abonnement au panier et met à jour le compteur
- * @param {string} name - Nom de l'abonnement
- * @param {number} price - Prix de l'abonnement
+ * Ajoute un abonnement au panier et enregistre dans le localStorage.
+ * @param {string} name - Nom de l'abonnement.
+ * @param {number} price - Prix de l'abonnement.
+ * @param {string} image - Chemin ou URL de l'image représentative.
+ * @param {string} description - Description optionnelle de l'abonnement.
  */
-function addToCart(name, price) {
+function addToCart(name, price, image, description) {
   // Crée un objet représentant l'article à ajouter
-  const item = { name: name, price: price };
-   // Récupère le panier actuel depuis localStorage (pour s'assurer d'avoir la dernière version)
+  const item = {
+    name: name,
+    price: price,
+    image: image || "default-image.jpg", // valeur par défaut si aucune image n'est fournie
+    description: description || ""
+  };
+  
+  // Récupère le panier actuel depuis le localStorage (ou initialise un tableau vide)
   let currentCart = JSON.parse(localStorage.getItem('cart')) || [];
   // Ajoute l'article au panier
   currentCart.push(item);
-  // Sauvegarde le panier mis à jour dans localStorage
+  // Sauvegarde le panier mis à jour dans le localStorage
   localStorage.setItem('cart', JSON.stringify(currentCart));
   updateCartCounter(); // Actualise le compteur
-  // Affiche une alerte de confirmation
   alert(`${name} a été ajouté à votre panier`);
 }
+
 
 /* ========= Gestion du Menu Burger ========= */
 document.getElementById('hamburger-menu')?.addEventListener('click', function() {
