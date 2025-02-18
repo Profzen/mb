@@ -30,7 +30,7 @@ body {
     margin-left: auto;
   }
   .nav-links button {
-    margin-right: 0px;
+    margin-left: 10px;
     background-color: white;
     color: #007BFF;
     border: none;
