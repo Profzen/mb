@@ -344,6 +344,20 @@ body {
     flex: 1;
   }
 }
+@media (max-width: 768px) {
+  .subscription-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* espace entre les cartes */
+  }
+  
+  .subscription-item {
+    /* Chaque carte occupe environ 50% de la largeur de la ligne moins un peu d'espace pour le gap */
+    flex: 0 0 calc(50% - 20px);
+    box-sizing: border-box;
+  }
+}
 
 /* Optionnel : classe pour afficher le menu burger quand il est actif */
 .nav-links.mobile-active {
@@ -388,15 +402,20 @@ body {
   margin-bottom: 15px;
 }
 
+/* Style pour la div de chaque article du panier */
 .cart-item {
+  background-color: #f8f8f8; /* Fond clair */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 2px solid #007BFF;
+  
 }
 
+/* Style pour l'image dans chaque article du panier */
 .cart-item-image {
   width: 80px;
   height: auto;
@@ -404,7 +423,24 @@ body {
   margin-right: 15px;
 }
 
+/* Style pour les détails de l'article */
 .cart-item-details {
   flex: 1;
 }
+
+/* Style pour le bouton "Supprimer" */
+.cart-item-details button {
+  background-color: #e74c3c; /* Rouge */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item-details button:hover {
+  background-color: #c0392b;
+}
+
 
