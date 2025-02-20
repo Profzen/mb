@@ -132,33 +132,7 @@ window.onclick = function(event) {
     registerModal.style.display = "none";
   }
 };
-// Lors du chargement du DOM, récupérer les paramètres d'URL et remplir la page
-window.addEventListener('DOMContentLoaded', function() {
-  // Récupérer les paramètres de l'URL
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get('name');
-  const price = params.get('price');
-  const image = params.get('image');
-  const description = params.get('description');
 
-  // Remplir les éléments de la page si les informations sont disponibles
-  if(name) {
-    document.getElementById('productName').textContent = name;
-  }
-  if(price) {
-    document.getElementById('productPrice').textContent = price + ' € / mois';
-  }
-  if(image) {
-    const imgElem = document.getElementById('productImage');
-    imgElem.src = image;
-    imgElem.alt = name;
-  }
-  if(description) {
-    document.getElementById('productDescription').textContent = description;
-  } else {
-    document.getElementById('productDescription').textContent = 'Description non disponible.';
-  }
-});
 
 // Gestion des actions sur les boutons
 document.getElementById("addToCart").addEventListener("click", function(){
@@ -200,11 +174,8 @@ function updateCartCounter() {
 }
 
 
-
 // Appelle updateCartCounter quand le DOM est entièrement chargé
 window.onload = updateCartCounter;
-
-
 
 /**
  * Ajoute un abonnement au panier et enregistre dans le localStorage.
@@ -239,13 +210,5 @@ document.getElementById('hamburger-menu')?.addEventListener('click', function() 
   navLinks.classList.toggle('mobile-active');
 });
 
-document.getElementById("addToCart").addEventListener("click", function(){
-  alert("Produit ajouté au panier !");
-  // Ici, vous pouvez ajouter la logique pour stocker le produit dans le panier (ex: localStorage)
-});
 
-document.getElementById("orderNow").addEventListener("click", function(){
-  alert("Redirection vers la page de commande !");
-  // Par exemple, rediriger vers une page de checkout
-  // window.location.href = "checkout.html";
-});
+
