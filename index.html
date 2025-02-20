@@ -14,7 +14,7 @@
     <!-- Barre de navigation avec logo et boutons de connexion/inscription -->
     <nav class="navbar">
       <div class="logo">
-        <img src="flex.jpg" alt="logo" class="logo">
+        <a href="index.html"><img src="flex.jpg" alt="logo" class="logo"></a>
       </div>
 
       <a href="cart.html"><button onclick="openCartModal()">
@@ -34,8 +34,8 @@
         <!-- Bouton qui ouvre nos abonnements -->
         <a href="subscription.html"><button >Nos offres</button></a>
         
-        <!-- Bouton qui ouvre la modale de connexion -->
-        <button onclick="openLoginModal()">Se connecter</button>
+        <!-- Bouton qui ouvre la page de connexion -->
+        <a href="login.html"><button >Se connecter</button></a>
         
       </div>
     </nav>
@@ -46,29 +46,41 @@
     <h2>Bienvenue sur Abonnement Platform</h2>
     <p>Découvrez nos abonnements exclusifs et profitez d'offres exceptionnelles !</p>
     <!-- Bouton pour accéder directement au panier (par exemple) -->
-    <!-- Bouton qui ouvre la modale d'inscription -->
-    <button onclick="openRegisterModal()">S'inscrire</button>
+    <!-- Bouton qui ouvre la page des offres -->
+    <a href="subscription.html"><button >Nos offres</button></a>
   </section>
 
-  <!-- ===== Section "Nos Abonnements" ===== -->
-  <section class="subscriptions">
-    <h2>Nos Abonnements</h2>
-    <div class="subscription-container">
-      <!-- Exemple d'abonnement -->
-      <div class="subscription-item">
-        <h3>Netflix Premium</h3>
-        <p>15€ / mois</p>
-        <!-- Bouton qui ajoute l'abonnement au panier -->
-        <button onclick="addToCart('Netflix Premium', 15)">Ajouter au panier</button>
+  <!-- ===== Section pourquoi nous choisir" ===== -->
+  <section class="why-choose-us">
+    <h2>Pourquoi nous choisir</h2>
+    <div class="why-choose-container">
+      <!-- Raison 1 : Qualité exceptionnelle -->
+      <div class="why-choose-item">
+        <img src="flex.jpg" alt="Qualité exceptionnelle" class="why-image">
+        <h3>Qualité exceptionnelle</h3>
+        <p>Des offres sélectionnées avec soin pour garantir une qualité irréprochable.</p>
       </div>
-      <div class="subscription-item">
-        <h3>Pack Cours en ligne</h3>
-        <p>20€ / mois</p>
-        <button onclick="addToCart('Pack Cours en ligne', 20)">Ajouter au panier</button>
+      <!-- Raison 2 : Support 24/7 -->
+      <div class="why-choose-item">
+        <img src="flex.jpg" alt="Support 24/7" class="why-image">
+        <h3>Support 24/7</h3>
+        <p>Un service client disponible à tout moment pour répondre à vos questions.</p>
       </div>
-      <!-- Vous pouvez ajouter d'autres abonnements ici -->
+      <!-- Raison 3 : Prix compétitifs -->
+      <div class="why-choose-item">
+        <img src="flex.jpg" alt="Prix compétitifs" class="why-image">
+        <h3>Prix compétitifs</h3>
+        <p>Des abonnements offrant le meilleur rapport qualité-prix sur le marché.</p>
+      </div>
+      <!-- Raison 4 : Innovation continue -->
+      <div class="why-choose-item">
+        <img src="flex.jpg" alt="Innovation continue" class="why-image">
+        <h3>Innovation continue</h3>
+        <p>Nous innovons constamment pour améliorer votre expérience utilisateur.</p>
+      </div>
     </div>
   </section>
+  
 
   <!-- ===== Section "Abonnements Populaires" ===== -->
   <section class="popular-subscriptions">
