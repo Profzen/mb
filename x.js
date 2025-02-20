@@ -59,6 +59,8 @@ function displayCart() {
   cartItemsContainer.appendChild(totalElement);
 }
 
+
+
 /**
  * Supprime un article du panier en fonction de son index
  * @param {number} index - Index de l'article à supprimer
@@ -85,9 +87,6 @@ function goToCheckout() {
 /**
  * Affiche le contenu du panier dans une alerte (optionnel)
  */
-/**
- * Affiche le contenu du panier dans une alerte (optionnel)
- */
 function viewCart() {
   const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
   if (currentCart.length === 0) {
@@ -100,9 +99,11 @@ function viewCart() {
   });
   alert(cartDetails);
 }
+
 /******************************************
  *       Gestion des Modales              *
  ******************************************/
+
 
 function openLoginModal() {
   document.getElementById('loginModal').style.display = 'block';
@@ -132,6 +133,19 @@ window.onclick = function(event) {
   }
 };
 
+
+// Gestion des actions sur les boutons
+document.getElementById("addToCart").addEventListener("click", function(){
+  alert("Produit ajouté au panier !");
+  // Ici, vous pouvez ajouter la logique pour stocker le produit dans le panier (ex: via localStorage)
+});
+
+document.getElementById("orderNow").addEventListener("click", function(){
+  alert("Redirection vers la page de commande !");
+  // Par exemple, rediriger vers une page de checkout
+  // window.location.href = "checkout.html";
+});
+
 document.getElementById('loginForm')?.addEventListener('submit', function(e) {
   e.preventDefault();
   alert("Connexion réussie !");
@@ -159,10 +173,9 @@ function updateCartCounter() {
   }
 }
 
+
 // Appelle updateCartCounter quand le DOM est entièrement chargé
 window.onload = updateCartCounter;
-
-
 
 /**
  * Ajoute un abonnement au panier et enregistre dans le localStorage.
@@ -196,3 +209,6 @@ document.getElementById('hamburger-menu')?.addEventListener('click', function() 
   const navLinks = document.querySelector('.nav-links');
   navLinks.classList.toggle('mobile-active');
 });
+
+
+document.addEventListener('DOMContentLoaded', updateCartCounter);
